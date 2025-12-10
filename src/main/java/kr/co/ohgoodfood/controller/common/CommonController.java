@@ -5,8 +5,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
@@ -119,7 +119,7 @@ public class CommonController {
 	// 상태 코드에 따른 에러 페이지 반환
 	@RequestMapping("/error")
 	public String handleException(HttpServletRequest request) {
-		Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
+		Integer statusCode = (Integer) request.getAttribute("jakarta.servlet.error.status_code");
 
 		if (statusCode != null) {
 			if (statusCode == 404) {

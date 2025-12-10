@@ -1,81 +1,61 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+### Gradle ###
+# Gradle 빌드에서 생성되는 폴더/파일
+.gradle
+/build/
+*.jar
+*.war
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-### STS ###
-.apt_generated
+# 하지만 Maven Wrapper 파일은 제외합니다.
+.mvn/
+
+### IDE (통합 개발 환경) ###
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse / STS
 .classpath
-.factorypath
 .project
-.settings
+.settings/
+.apt_generated
+.factorypath
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+# VS Code
+.vscode/
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
-
-# Maven build
-/target/
-!.mvn/wrapper/maven-wrapper.jar
-
-# IDE
-/.idea/
-/*.iml
-*.class
-
-# Logs
-*.log
-
-# OS
+### OS 및 환경 ###
+# OS 생성 파일
 .DS_Store
 Thumbs.db
 
-# Java
-*.class
-
-# Eclipse
-*.classpath
-*.project
-*.settings/
-
-# IntelliJ
-*.ipr
-*.iws
-
-# VSCode
-.vscode/
-
-# Build tools
-*.war
-*.jar
-
-# 환경 설정 파일
-application.properties
-application.yml
-.env
-
-# 기타
+# 로그 및 캐시
+*.log
 npm-debug.log
 yarn-debug.log
 yarn-error.log
 
-# 리소스
+# 컴파일된 자바 클래스 파일
+*.class
+/target/ # (Maven 흔적이지만, 실수로 빌드될 경우를 대비해 둡니다.)
+
+### 환경 설정 파일 (중요: 보안을 위해 Git에 포함하지 않음) ###
+# Spring Boot 또는 일반 환경 설정 파일
+application.properties
+application.yml
+.env
+
+# 리소스 (데이터베이스 연결 정보 등)
 /src/main/resources/db.properties

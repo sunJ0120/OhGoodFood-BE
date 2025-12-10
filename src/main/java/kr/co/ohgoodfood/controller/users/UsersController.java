@@ -2,7 +2,7 @@ package kr.co.ohgoodfood.controller.users;
 
 import java.util.List;
 
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpSession;
 
 import kr.co.ohgoodfood.dto.*;
 import org.springframework.beans.factory.annotation.Value;

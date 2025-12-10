@@ -1,9 +1,6 @@
 package kr.co.ohgoodfood.config;
 
 import java.util.concurrent.Executor;
-
-import javax.sql.DataSource;
-
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -21,7 +18,6 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.transaction.TransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -33,6 +29,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import com.zaxxer.hikari.HikariDataSource;
 
 import kr.co.ohgoodfood.util.LoginInterceptor;
+
+import javax.sql.DataSource;
 
 @Configuration
 @EnableWebMvc
@@ -134,14 +132,14 @@ public class MvcConfig implements WebMvcConfigurer {
 		 */
 	}
 
-	// file Upload
-	@Bean
-	public CommonsMultipartResolver multipartResolver() {
-		CommonsMultipartResolver cmr = new CommonsMultipartResolver();
-		cmr.setMaxUploadSize(1024 * 1024 * 5);
-		cmr.setDefaultEncoding("UTF-8");
-		return cmr;
-	}
+//	// file Upload
+//	@Bean
+//	public CommonsMultipartResolver multipartResolver() {
+//		CommonsMultipartResolver cmr = new CommonsMultipartResolver();
+//		cmr.setMaxUploadSize(1024 * 1024 * 5);
+//		cmr.setDefaultEncoding("UTF-8");
+//		return cmr;
+//	}
 
 	// swagger
 	@Override

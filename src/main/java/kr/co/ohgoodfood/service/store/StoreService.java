@@ -5,7 +5,7 @@ import kr.co.ohgoodfood.dto.Orders;
 import kr.co.ohgoodfood.dto.Review;
 import kr.co.ohgoodfood.dto.Image;
 import kr.co.ohgoodfood.dto.Product;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.multipart.MultipartFile;
 import kr.co.ohgoodfood.dto.Store;
 import kr.co.ohgoodfood.dto.StoreSales;
